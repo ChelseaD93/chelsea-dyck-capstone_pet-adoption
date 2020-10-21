@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+import About from './components/About/About';
+import AdoptableAnimals from './components/AdoptableAnimals/AdoptableAnimals';
+import Login from './components/Login/Login';
+import Profile from './components/Profile/Profile';
+import NotFound from './components/NotFound/NotFound';
+import './App.scss';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Header />
+        <Switch>
+          <Route path='/' exact render={(routeProps) => <Home {...routeProps} />} />
+          <Route path='/about' exact render={(routeProps) => <About {...routeProps} />} />
+          <Route path='/adoptable-animals' exact render={(routeProps) => <AdoptableAnimals {...routeProps} />} />
+          <Route path='/login' exact render={(routeProps) => <Login {...routeProps} />} />
+          <Route path='/profile' exact render={(routeProps) => <Profile {...routeProps} />} />
+          <Route path='/not-found' exact render={(routeProps) => <NotFound {...routeProps} />} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

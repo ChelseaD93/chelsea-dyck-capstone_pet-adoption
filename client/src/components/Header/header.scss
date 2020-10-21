@@ -1,0 +1,33 @@
+@import '../../styles/global.scss';
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &__logo{
+        font-size: 2rem;
+        font-weight: 800;
+        @include link;
+        
+        &-name {
+            margin: 1.5vh 0;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        
+        &-link {
+            margin: 0 8vw;
+            @include link;
+
+            &-text {
+                margin: 0.5vh 0;
+            }
+        }
+    }
+}
