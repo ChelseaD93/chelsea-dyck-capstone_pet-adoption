@@ -4,6 +4,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 5vw;
+    }
     
     &__logo{
         font-size: 2rem;
@@ -20,10 +26,19 @@
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
+
+        @include tablet {
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
         
         &-link {
             margin: 0 8vw;
             @include link;
+
+            @include tablet {
+                margin: 0 1vw;
+            }
 
             &-text {
                 margin: 0.5vh 0;
