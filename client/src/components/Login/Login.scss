@@ -1,1 +1,161 @@
 @import '../../styles/global.scss';
+
+.login {
+
+    &__hero {
+        background-image: url('../../assets/images/brianna-santellan-LGG5P7KCziU-unsplash.jpg');
+        @include  hero-image;
+        background-position: center top;
+
+        &-title {
+            @include h1;
+            padding: 28vh 0 0 0;
+
+            @include tablet {
+                padding: 46vh 0 0 0;
+            }
+
+            @include desktop {
+                padding: 44vh 0 0 0;
+            }
+        }
+    }
+
+    &__title {
+        @include general-padding;
+    }
+
+    &__form {
+        padding: 2vh 6vw 4vh 6vw;
+        background-color: $background-colour-two;
+
+        @include desktop {
+            display: flex;
+            justify-content: space-around;
+        }
+
+       
+        &-fillable {
+            background-color: $background-colour-one;
+            padding: 2vh 2vw;
+            @include box-shadow;
+            border-radius: 5px;
+
+            @include desktop {
+                display: flex;
+                flex-direction: column;
+                width: 60vw;
+                padding: 2vh 5vw 5vh 5vw;
+            }
+
+            &-dynamic {
+
+                @include desktop {
+                    display: flex;
+                justify-content: space-between;
+                }
+            }
+
+            &-personal {
+
+                @include desktop {
+                    width: 28vw;
+                }             
+            }
+
+            &-preferences {
+                
+                @include desktop {
+                    width: 27.5vw;
+                }               
+            }
+
+
+            &-section {
+                display: flex;
+                flex-direction: column;
+
+                &-label {
+                    margin: 2vh 0 0.5vh 0;
+                    font-weight: 600;
+                }
+
+                &-input {
+                    @include input-format;
+
+                    @include desktop {
+                        margin: 0 0 1.25vh 0;
+                    } 
+                }
+            }
+
+            &-animal {
+
+                &-title {
+                    font-weight: 600;
+                    margin: 3vh 0 1vh 0;
+
+                    @include desktop {
+                        margin: 1.75vh 0 1vh 0;
+                    } 
+                }
+
+                &-select {
+                    @include input-format;
+                }
+            }
+
+            &-age {
+
+                &-title {
+                    font-weight: 600;
+                    margin: 3vh 0 1vh 0;
+                }
+
+                &-select {
+                    @include input-format;
+                }
+            }
+
+            &-size {
+
+                &-title {
+                    font-weight: 600;
+                    margin: 3vh 0 1vh 0;
+                }
+
+                &-select {
+                    @include input-format;
+                    margin-bottom: 5vh;
+                }
+            }
+            &-button {
+                display: flex;
+                justify-content: space-around;
+
+                @include desktop {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                &-submit {
+                    @include CTA-button;
+                    width: 25vw;
+
+                    @include desktop {
+                        width: 28vw;
+                    }                    
+                }
+
+                &-cancel {
+                    @include cancel-button;
+                    width: 25vw;
+
+                    @include desktop {
+                        width: 28vw;
+                    }                    
+                }
+            }
+        }
+    }
+}
