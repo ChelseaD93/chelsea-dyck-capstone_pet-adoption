@@ -7,6 +7,7 @@ import AdoptableAnimals from './components/AdoptableAnimals/AdoptableAnimals';
 import Login from './components/Login/Login';
 import Profile from './components/Profile/Profile';
 import NotFound from './components/NotFound/NotFound';
+import Footer from './components/Footer/Footer';
 import './App.scss';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/profile' exact render={(routeProps) => <Profile {...routeProps} />} />
           <Route path='/not-found' exact render={(routeProps) => <NotFound {...routeProps} />} />
         </Switch>
+        <Footer />
       </BrowserRouter>
     </div>
   );

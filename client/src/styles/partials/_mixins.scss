@@ -15,6 +15,29 @@
     text-decoration: none;
 }
 
+@mixin general-padding {
+  padding: 0 6vw;
+}
+
+@mixin hero-image {
+        background-size: cover;
+        background-blend-mode: overlay;
+        padding: 0 6vw;
+        height: 35vh;
+        width: 100%;
+        background-position: center center;
+        
+        @include tablet {
+            height: 55vh;
+            width: 100%;
+        }
+
+        @include desktop {
+            height: 55vh;
+            width: 100%;
+        }
+}
+
 @mixin CTA-button {
   position: relative;
   background-color: $background-colour-four;

@@ -21,27 +21,29 @@ function Home(routeProps) {
                     </Link>
                 </div>
                 <div className="home__main-animals">
-                    <h2 className="home__main-animalsintro">Checkout our current adoptable animals:</h2>
-                    <div className="home__main-animals-card">
-                        <img src={cat} alt="" className="home__main-animals-card-image"/>
-                        <h3 className="home__main-animals-card-title">Adoptable Cats</h3>
-                        <Link to='/adoptable-animals/cats'className="home__main-animals-card-link">
-                            <button className="home__main-animals-card-link-button">See Current Postings</button>
-                        </Link>
-                    </div>
-                    <div className="home__main-animals-card">
-                        <img src={dog} alt="" className="home__main-animals-card-image"/>
-                        <h3 className="home__main-animals-card-title">Adoptable Dogs</h3>
-                        <Link to='/adoptable-animals/dogs'className="home__main-animals-card-link">
-                            <button className="home__main-animals-card-link-button">See Current Postings</button>
-                        </Link>
-                    </div>
-                    <div className="home__main-animals-card">
-                        <img src={bunny} alt="" className="home__main-animals-card-image"/>
-                        <h3 className="home__main-animals-card-title">Adoptable Critters</h3>
-                        <Link to='/adoptable-animals/critters'className="home__main-animals-card-link">
-                            <button className="home__main-animals-card-link-button">See Current Postings</button>
-                        </Link>
+                    <h2 className="home__main-animals-intro">Checkout our current adoptable animals:</h2>
+                    <div className="home__main-animals-options">
+                        <div className="home__main-animals-card">
+                            <img src={cat} alt="" className="home__main-animals-card-image"/>
+                            <h3 className="home__main-animals-card-title">Adoptable Cats</h3>
+                            <Link to='/adoptable-animals/cats'className="home__main-animals-card-link">
+                                <button className="home__main-animals-card-link-button">See Current Postings</button>
+                            </Link>
+                        </div>
+                        <div className="home__main-animals-card">
+                            <img src={dog} alt="" className="home__main-animals-card-image"/>
+                            <h3 className="home__main-animals-card-title">Adoptable Dogs</h3>
+                            <Link to='/adoptable-animals/dogs'className="home__main-animals-card-link">
+                                <button className="home__main-animals-card-link-button">See Current Postings</button>
+                            </Link>
+                        </div>
+                        <div className="home__main-animals-card">
+                            <img src={bunny} alt="" className="home__main-animals-card-image"/>
+                            <h3 className="home__main-animals-card-title">Adoptable Critters</h3>
+                            <Link to='/adoptable-animals/critters'className="home__main-animals-card-link">
+                                <button className="home__main-animals-card-link-button">See Current Postings</button>
+                            </Link>
+                        </div>
                     </div>
                 </div>                
             </div>            

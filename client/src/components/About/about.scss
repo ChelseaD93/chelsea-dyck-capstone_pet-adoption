@@ -1,0 +1,99 @@
+@import '../../styles/global.scss';
+
+.about {
+    overflow: hidden;    
+
+    &__hero {
+        background-image: url('../../assets/images/scarlette-rose-I8H9M0fGPoQ-unsplash.jpg'), linear-gradient(rgba(5, 5, 5, 0.25), rgba(5, 5, 5, 0.25));
+        @include general-padding;
+        @include hero-image;
+        background-position: 50% 25%;
+
+        &-title {
+            color: $secondary-font-colour;
+            margin: 0;
+            padding: 27vh 0 0 0;
+
+            @include tablet {
+                font-size: 2.5rem;
+                padding: 45vh 0 0 0;
+            }
+
+            @include desktop {
+                font-size: 3rem;
+                padding: 43vh 0 0 0;
+            }
+        }        
+    }
+
+    &__mission {
+        @include general-padding;
+
+        @include tablet {
+            padding-bottom: 2vh;
+        }
+
+        &-title {
+            
+            @include tablet {
+                font-size: 1.75rem;
+            }
+
+            @include desktop {
+                font-size: 2rem;
+            }
+
+        }
+
+        &-blurb {
+
+            @include tablet {
+                font-size: 1.15rem;
+            }
+
+            @include desktop {
+                font-size: 1.25rem;
+            }
+        }
+
+    }
+
+    &__process {
+        @include general-padding;
+        padding-top: 0.1vh;
+        padding-bottom: 2vh;
+        background-color: $background-colour-one;
+
+        &-title {
+
+            @include tablet {
+                font-size: 1.75rem;
+            }
+
+            @include desktop {
+                font-size: 2rem;
+            }
+        
+        }
+
+        &-steps {
+            padding: 0 10vw;
+
+            @include desktop {
+                padding: 0 5vw;
+            }
+
+            &-item {
+                padding: 1vh 0;
+
+                @include tablet {
+                    font-size: 1.15rem;
+                }
+
+                @include desktop {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}

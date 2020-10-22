@@ -1,0 +1,11 @@
+@import '../../styles/global.scss';
+
+.footer {
+    background-color: $background-colour-three;
+    padding: 2vh 6vw;
+
+    &-copywrite {
+        margin: 0;
+        text-align: center;
+    }
+}
