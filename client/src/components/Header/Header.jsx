@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './header.scss';
 
 function Header() {
@@ -9,18 +9,18 @@ function Header() {
                 <p className="header__logo-name">Pet Portal</p>
             </Link>
             <div className="header__nav">
-                <Link to='/' className='header__nav-link'>
+                <NavLink to='/' className='header__nav-link' activeClassName="header__nav-link--active">
                     <p className="header__nav-link-text">Home</p>
-                </Link>
-                <Link to='/about' className='header__nav-link'>
+                </NavLink>
+                <NavLink to='/about' className='header__nav-link' activeClassName="header__nav-link--active">
                     <p className="header__nav-link-text">About</p>
-                </Link>
-                <Link to='/login' className='header__nav-link'>
+                </NavLink>
+                <NavLink to='/login' className='header__nav-link' activeClassName="header__nav-link--active">
                     <p className="header__nav-link-text">Login</p>
-                </Link>
-                <Link to='/adoptable-animals' className='header__nav-link'>
+                </NavLink>
+                <NavLink to='/adoptable-animals' className='header__nav-link' activeClassName="header__nav-link--active">
                     <p className="header__nav-link-text">Adoptable Animals</p>
-                </Link>                
+                </NavLink>                
                 {/* { isLoggedIn &&
                 <Link to='/profile' className='header__nav-link'>
                     <p className="header__nav-link-text">Profile</p>

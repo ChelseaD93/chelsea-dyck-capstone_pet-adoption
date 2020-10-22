@@ -14,3 +14,17 @@
 @mixin link {
     text-decoration: none;
 }
+
+@mixin CTA-button {
+  position: relative;
+  background-color: $background-colour-four;
+  border: 2px solid $background-colour-five;
+  border-radius: 5px;
+  height: 5vh;
+  font-size: 1rem;
+  font-weight: 600;
+
+  &:hover {
+      background-color: $background-colour-three;
+  }
+}

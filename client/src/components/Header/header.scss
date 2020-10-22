@@ -4,11 +4,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: $background-colour-three;
+    padding-bottom: 2vh;
 
     @include tablet {
         flex-direction: row;
         justify-content: space-between;
-        margin: 0 5vw;
+        padding: 0 5vw;
+        padding-bottom: 0;
     }
     
     &__logo{
@@ -40,8 +43,13 @@
                 margin: 0 1vw;
             }
 
+            // &--active {
+            //     background-color: #b2c4aa;
+            // }
+
             &-text {
                 margin: 0.5vh 0;
+                font-weight: 600;
             }
         }
     }
