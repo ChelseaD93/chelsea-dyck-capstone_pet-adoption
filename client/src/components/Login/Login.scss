@@ -184,9 +184,6 @@
                     text-decoration: underline;
                 }
 
-                &-blurb {  
-                    
-                }
             }
 
             &-instructions {
@@ -209,18 +206,12 @@
                 }
             }
 
-            &-luck {
-
-            }
-
             &-close {
 
                 &-button {
                     @include CTA-button;
                 }
             }
-
-
         }
     }
 }

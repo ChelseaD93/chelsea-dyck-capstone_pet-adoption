@@ -5,17 +5,11 @@ import './login.scss';
 
 class Login extends React.Component {
     
+    //state to handle the visibility of the Pop-up window after form submission
     state = {
         visible: false,
     }
 
-    //this will open a pop-up window after the submit to show submission received
-    openModal(e) {
-        e.preventDefault();
-        this.setState({
-            visible : true
-        });
-    }
     
     //this will close the pop-up window and redirect to the main animals page
     //might not need this one since we are changing pages immediately
@@ -36,6 +30,15 @@ class Login extends React.Component {
     }
 
     //axios call to send the information to the backend adopter table
+    formSubmit(e) {
+        //this will open a pop-up window after the submit to show submission received
+        e.preventDefault();
+        this.setState({
+            visible : true
+        });
+        console.log(e.target.lastName.value)
+    }
+
 
     render() {
         return (
@@ -45,7 +48,7 @@ class Login extends React.Component {
                 </div>
                 <h2 className="login__title">Fill out the following form to start receiving emails when adoption opportunities are posted:</h2>
                 <div className="login__form">
-                    <form name="form" className="login__form-fillable">
+                    <form name="form" onSubmit={(e) => this.formSubmit(e)}className="login__form-fillable">
                         <div className="login__form-fillable-dynamic">
                             <div className="login__form-fillable-personal">
                                 <div className="login__form-fillable-section">
@@ -94,8 +97,8 @@ class Login extends React.Component {
                             </div>
                         </div>                    
                         <div className="login__form-fillable-button">
-                            <button className="login__form-fillable-button-submit" onClick={(e) => this.openModal(e)}>Submit</button>  
-                            <button onclick={(e) => this.hardReset(e)} className="login__form-fillable-button-cancel">Cancel</button> 
+                            <button className="login__form-fillable-button-submit">Submit</button>  
+                            <button onClick={(e) => this.hardReset(e)} className="login__form-fillable-button-cancel">Cancel</button> 
                         </div>                                     
                     </form>
                 </div>
