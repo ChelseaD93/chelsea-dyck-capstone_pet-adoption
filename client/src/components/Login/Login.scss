@@ -158,4 +158,69 @@
             }
         }
     }
+
+    &__popup {
+
+
+        &-message {
+            padding: 3vh 6vw;
+            background-color: $background-colour-one;
+            position: absolute;
+            top: -35vh;
+            left: -47vw;
+            width: 70vw;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+
+            &-top {
+                text-align: center;              
+
+                &-title {
+                    margin: 0;
+                    font-weight: 700;
+                    text-decoration: underline;
+                }
+
+                &-blurb {  
+                    
+                }
+            }
+
+            &-instructions {
+                background-color: $background-colour-three;
+                border: 1px solid $background-colour-five;
+                border-radius: 5px;
+                padding: 1vh 4vw;
+
+                &-title {
+                    margin: 1vh 0 0 0;
+                }
+
+                &-next {
+
+                    &-step {
+                        @include tablet {
+                            margin-bottom: 1vh;
+                        }
+                    }
+                }
+            }
+
+            &-luck {
+
+            }
+
+            &-close {
+
+                &-button {
+                    @include CTA-button;
+                }
+            }
+
+
+        }
+    }
 }
