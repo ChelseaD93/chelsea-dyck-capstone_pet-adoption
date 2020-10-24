@@ -4,7 +4,8 @@
   "description": "pet-adoption-capstone",
   "main": "server.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "migrate":"knex migrate:latest"
   },
   "author": "Chelsea Dyck",
   "license": "MIT",

@@ -3,7 +3,7 @@ module.exports = {
     connection: {
         host: '127.0.0.1',
         user: 'root',
-        password: '',
+        password: 'rootroot',
         database: 'pet_adoption_capstone',
         charset: 'utf8'
     }
