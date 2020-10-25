@@ -5,8 +5,7 @@ exports.up = function(knex) {
         table.string('name').notNullable();
         table.string('size').notNullable();
         table.string('age').notNullable();
-        table.string('type').notNullable();
-        table.mediumblob('photo').notNullable();        
+        table.string('type').notNullable();      
         table.timestamp('added_on').defaultTo(knex.fn.now());
     })
 };
