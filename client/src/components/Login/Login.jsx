@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-awesome-modal';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './login.scss';
 
@@ -36,7 +37,15 @@ class Login extends React.Component {
         this.setState({
             visible : true
         });
-        console.log(e.target.lastName.value)
+        let newAdopter = {
+            firstName: e.target.firstName.value,
+            lastName: e.target.lastName.value,
+            email: e.target.email.value,
+            animal: e.target.animal.value,
+            age: e.target.age.value,
+            size: e.target.size.value
+        }
+        axios.post('/sign-up', newAdopter)
     }
 
 
@@ -76,7 +85,7 @@ class Login extends React.Component {
                                 </div>
                                 <div className="login__form-fillable-age">
                                     <p className="login__form-fillable-age-title">What age are you looking for?</p>
-                                    <select name="animal" className="login__form-fillable-age-select">
+                                    <select name="age" className="login__form-fillable-age-select">
                                         <option  value='' selected disabled className="login__form-fillable-age-select-input" >--Select One--</option>
                                         <option  value='Baby' className="login__form-fillable-age-select-input" >Baby</option>
                                         <option  value='Young' className="login__form-fillable-age-select-input" >Young</option>
@@ -86,7 +95,7 @@ class Login extends React.Component {
                                 </div>
                                 <div className="login__form-fillable-size">
                                     <p className="login__form-fillable-size-title">What adult size do you want?</p>
-                                    <select name="animal" className="login__form-fillable-size-select">
+                                    <select name="size" className="login__form-fillable-size-select">
                                         <option  value='' selected disabled className="login__form-fillable-size-select-input" >--Select One--</option>
                                         <option  value='Small' className="login__form-fillable-size-select-input" >Small</option>
                                         <option  value='Medium' className="login__form-fillable-size-select-input" >Medium</option>
