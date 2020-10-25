@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "jest",
-    "migrate":"knex migrate:latest"
+    "migrate":"knex migrate:latest",
+    "seed":"knex seed:run"
   },
   "author": "Chelsea Dyck",
   "license": "MIT",
