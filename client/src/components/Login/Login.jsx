@@ -32,11 +32,12 @@ class Login extends React.Component {
 
     //axios call to send the information to the backend adopter table
     formSubmit(e) {
-        //this will open a pop-up window after the submit to show submission received
         e.preventDefault();
+        //this will open a pop-up window after the submit to show submission received
         this.setState({
             visible : true
         });
+        //pull all values from form
         let newAdopter = {
             firstName: e.target.firstName.value,
             lastName: e.target.lastName.value,
@@ -45,7 +46,12 @@ class Login extends React.Component {
             age: e.target.age.value,
             size: e.target.size.value
         }
+
+        //post new Adopter information into adopter_profiles table in database
         axios.post('/sign-up', newAdopter)
+
+        //post new Adopter info to SendInBlue to send welcome email
+        
     }
 
 
