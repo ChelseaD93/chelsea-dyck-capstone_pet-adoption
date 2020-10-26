@@ -1,0 +1,97 @@
+@import '../../styles/global.scss';
+
+.animals {
+    
+    &__hero {
+        background-image: url('../../assets/images/krista-mangulsone-9gz3wfHr65U-unsplash.jpg'), linear-gradient(rgba(5, 5, 5, 0.25), rgba(5, 5, 5, 0.25));
+        @include  hero-image;
+        background-position: center center;
+
+        &-title {
+            @include h1;
+            padding: 28vh 0 0 0;
+
+            @include tablet {
+                padding: 46vh 0 0 0;
+            }
+
+            @include desktop {
+                padding: 44vh 0 0 0;
+            }
+        }
+    }
+
+    &__intro {
+        @include general-padding;
+        font-size: 1rem;
+    }
+
+    &__nav {
+        @include general-padding;
+        margin: 3vh 0;
+        display: flex;
+        justify-content: space-between;
+
+        &-link {
+
+            &-button {
+                @include CTA-button;
+                width: 22vw;
+            }
+        }
+        
+    }
+
+    &__available {
+        background-color: $background-colour-one;
+        @include general-padding;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &-loading {
+            margin: 0;
+            padding: 1vh 0;
+            text-align: center;
+        }
+
+        &-card {
+            @include animal-card;
+
+            &-image {
+                background-color: black;
+                @include animal-image;
+            }
+
+            &-name {
+                @include animal-name;
+            }
+
+            &-content {
+                @include general-padding;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &-info {
+                    margin: 0.5vh 0;
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                }
+            }
+            
+            &-link {
+                margin-top: 1vh;
+
+                &-button {
+                    @include CTA-button;
+                }
+            }
+        }
+    }    
+}

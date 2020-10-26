@@ -103,3 +103,49 @@
     height: 4vh;
   } 
 }
+
+@mixin animal-card {
+  background-color: $background-colour-two;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  padding: 2vh 0;
+  margin: 2vh 0;
+  
+
+  @include tablet {
+      width: 27vw;
+  }
+}
+
+@mixin animal-image {
+  height: 80vw;
+  width: 80vw;
+  border-radius: 5px;
+
+  @include tablet {
+      width: 22vw;
+      height: 22vw;
+  }
+
+  @include desktop {
+      width: 24vw;
+      height: 24vw;
+  }
+}
+
+@mixin animal-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1vh 0;
+
+  @include tablet {
+      font-size: 1.25rem;
+  }
+
+  @include tablet {
+      font-size: 1.5rem;
+  }
+}

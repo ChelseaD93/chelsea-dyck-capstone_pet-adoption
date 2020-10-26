@@ -26,7 +26,7 @@ const authToken = '';
 //     })
 //     .then(
 //         axios
-//             .get('https://api.petfinder.com/v2/animals?limit=25', { 
+//             .get('https://api.petfinder.com/v2/animals?limit=5', { 
 //                 headers: {
 //                     Authorization: `Bearer ${authToken}`
 //                 }
