@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import './adoptableCats.scss'
 
 function AdoptableCats(catList) {
+    console.log("cats")
+
     return (
         <div className="animals">
             <div className="animals__hero">

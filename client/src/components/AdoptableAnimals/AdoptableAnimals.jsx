@@ -878,7 +878,7 @@ class AdoptableAnimals extends React.Component {
             const filteredAnimals = this.state.animals.filter(animal => animal.species === 'Dog')
             this.setState({selectedAnimal: filteredAnimals})
         } else if (animalChoice === 'Critter'){
-            const filteredAnimals = this.state.animals.filter(animal => animal.species !== 'Dog' && 'Cat')
+            const filteredAnimals = this.state.animals.filter(animal => animal.species !== 'Dog' && animal.species !=='Cat')
             this.setState({selectedAnimal: filteredAnimals})
         }
     }
@@ -895,9 +895,9 @@ class AdoptableAnimals extends React.Component {
             </div>
             <h2 className="animals__intro">Looking for a specific animal? Choose from one of our options below:</h2>
             <div className="animals__nav">
-                <Link to="/adoptable-animals/cats" className="animals__nav-link">
-                    <button value='Cat' className="animals__nav-link-button">Cats</button>
-                </Link>
+                {/* <Link to="/adoptable-animals/cats" className="animals__nav-link"> */}
+                    <button value='Cat' onClick={(e) => this.animalFilter(e.target.value)} className="animals__nav-link-button">Cats</button>
+                {/* </Link> */}
                 {/* <Link to="/adoptable-animals/dogs" className="animals__nav-link"> */}
                     <button value='Dog' onClick={(e) => this.animalFilter(e.target.value)} className="animals__nav-link-button">Dogs</button>
                 {/* </Link> */}
@@ -929,12 +929,7 @@ class AdoptableAnimals extends React.Component {
                             )  
                         }) 
                     )}
-            </div>
-            <Switch>
-                <Route path='/adoptable-animals/cats' exact component={AdoptableCats} catList={this.state.animals.filter(animal => {return animal.species === 'Cat'})} />
-                <Route path='/adoptable-animals/dogs' exact component={AdoptableDogs} dogList={this.state.animals.filter(animal => {return animal.species === 'Dog'})} />
-                <Route path='/adoptable-animals/critters' exact component={AdoptableCritters} critterList={this.state.animals.filter(animal => {return animal.species !== 'Cat' && animal.species !== 'Dog'})} />
-            </Switch>            
+            </div>            
         </div>
         );
     }

@@ -61,18 +61,18 @@ router.post('/', (req, res) => {
     sendSmtpEmail.sender = {
         "name":"Chelsea Dyck",
         "email":"chelsea@mycreativeworks.ca"};
-    sendSmtpEmail.to = {
-        "email":`${email}`,
-        "name":`${firstName} ${lastName}`
-    };
+    sendSmtpEmail.to = [{
+        "email":"chelseadyck@cassconsultinc.ca",
+        "name":"Chelsea Dyck"
+    }];
     sendSmtpEmail.replyTo = {
         "email":"chelsea@mycreativeworks.ca",
         "name":"Chelsea Dyck"
     };
     sendSmtpEmail.templateId = 1;
     sendSmtpEmail.params = {
-        "firstName":`${firstName}`,
-        "lastName":`${lastName}`,
+        "firstName":"Chelsea",
+        "lastName":"Dyck",
     };
 
     apiInstance.sendTransacEmail(sendSmtpEmail).then(function(data) {
