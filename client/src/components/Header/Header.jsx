@@ -16,7 +16,7 @@ function Header() {
                     <p className="header__nav-link-text">About</p>
                 </NavLink>
                 <NavLink to='/login' className='header__nav-link' activeClassName="header__nav-link--active">
-                    <p className="header__nav-link-text">Login</p>
+                    <p className="header__nav-link-text">Sign Up</p>
                 </NavLink>
                 <NavLink to='/adoptable-animals' className='header__nav-link' activeClassName="header__nav-link--active">
                     <p className="header__nav-link-text">Adoptable Animals</p>

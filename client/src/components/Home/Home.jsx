@@ -5,7 +5,7 @@ import dog from '../../assets/images/sippakorn-yamkasikorn-AFfj2QTS8KM-unsplash.
 import bunny from '../../assets/images/andriyko-podilnyk-3a1NOxCBY10-unsplash.jpg';
 import './home.scss';
 
-function Home(routeProps) {
+function Home() {
     return (
         <div className='home'>
             <div className="home__hero">

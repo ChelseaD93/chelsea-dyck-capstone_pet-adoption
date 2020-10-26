@@ -25,9 +25,6 @@ class Login extends React.Component {
     hardReset(e) {
         e.preventDefault();
         document.forms["form"].reset();
-        document.querySelector(".login__form-fillable-animal-select-input").setAttribute("disabled","disabled");
-        document.querySelector(".login__form-fillable-age-select-input").setAttribute("disabled","disabled");
-        document.querySelector(".login__form-fillable-size-select-input").setAttribute("disabled","disabled");
     }
 
     //axios call to send the information to the backend adopter table
@@ -37,6 +34,7 @@ class Login extends React.Component {
         this.setState({
             visible : true
         });
+        this.hardReset(e)
         //pull all values from form
         let newAdopter = {
             firstName: e.target.firstName.value,
@@ -51,7 +49,7 @@ class Login extends React.Component {
         axios.post('/sign-up', newAdopter)
 
         //post new Adopter info to SendInBlue to send welcome email
-        
+        axios.post('/send-in-blue', newAdopter)
     }
 
 
@@ -82,8 +80,8 @@ class Login extends React.Component {
                             <div className="login__form-fillable-preferences">
                                 <div className="login__form-fillable-animal">
                                     <p className="login__form-fillable-animal-title">What animal are you looking to adopt?</p>
-                                    <select name="animal" className="login__form-fillable-animal-select">
-                                        <option  value='' selected disabled className="login__form-fillable-animal-select-input" >--Select One--</option>
+                                    <select name="animal" defaultValue = 'default' className="login__form-fillable-animal-select">
+                                        <option  value='default' disabled className="login__form-fillable-animal-select-input" >--Select One--</option>
                                         <option  value='Cat' className="login__form-fillable-animal-select-input" >Cat</option>
                                         <option  value='Dog' className="login__form-fillable-animal-select-input" >Dog</option>
                                         <option  value='Critter' className="login__form-fillable-animal-select-input" >Other Animal</option>
@@ -91,8 +89,8 @@ class Login extends React.Component {
                                 </div>
                                 <div className="login__form-fillable-age">
                                     <p className="login__form-fillable-age-title">What age are you looking for?</p>
-                                    <select name="age" className="login__form-fillable-age-select">
-                                        <option  value='' selected disabled className="login__form-fillable-age-select-input" >--Select One--</option>
+                                    <select name="age" defaultValue = 'default' className="login__form-fillable-age-select">
+                                        <option  value='default' disabled className="login__form-fillable-age-select-input" >--Select One--</option>
                                         <option  value='Baby' className="login__form-fillable-age-select-input" >Baby</option>
                                         <option  value='Young' className="login__form-fillable-age-select-input" >Young</option>
                                         <option  value='Adult' className="login__form-fillable-age-select-input" >Adult</option>
@@ -101,8 +99,8 @@ class Login extends React.Component {
                                 </div>
                                 <div className="login__form-fillable-size">
                                     <p className="login__form-fillable-size-title">What adult size do you want?</p>
-                                    <select name="size" className="login__form-fillable-size-select">
-                                        <option  value='' selected disabled className="login__form-fillable-size-select-input" >--Select One--</option>
+                                    <select name="size" defaultValue = 'default' className="login__form-fillable-size-select">
+                                        <option  value='default' disabled className="login__form-fillable-size-select-input" >--Select One--</option>
                                         <option  value='Small' className="login__form-fillable-size-select-input" >Small</option>
                                         <option  value='Medium' className="login__form-fillable-size-select-input" >Medium</option>
                                         <option  value='Large' className="login__form-fillable-size-select-input" >Large</option>
