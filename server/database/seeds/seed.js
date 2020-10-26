@@ -41,7 +41,7 @@ const animalProfilesData=[
       size: "large",
       age: "baby",
       type: "dog",
-      photo: "../../../public/images/andriyko-podilnyk-3a1NOxCBY10-unsplash.jpg",
+      photo: "/images/andriyko-podilnyk-3a1NOxCBY10-unsplash.jpg",
       link: "mylink.com"
   },
   {
@@ -49,7 +49,7 @@ const animalProfilesData=[
       size: "small",
       age: "adult",
       type: "dog",
-      photo: "../../../public/images/brianna-santellan-LGG5P7KCziU-unsplash.jpg",
+      photo: "/images/brianna-santellan-LGG5P7KCziU-unsplash.jpg",
       link: "mylink.com"
   },
   {
@@ -57,7 +57,7 @@ const animalProfilesData=[
       size: "medium",
       age: "adult",
       type: "cat",
-      photo: "../../../public/images/brianna-santellan-LGG5P7KCziU-unsplash.jpg",
+      photo: "/images/brianna-santellan-LGG5P7KCziU-unsplash.jpg",
       link: "mylink.com"
   },
 ]
