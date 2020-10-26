@@ -1,10 +1,14 @@
 const express = require('express');
-
 const app = express();
 const AnimalProfiles = require('../database/models/animal_profiles');
 const router = express.Router();
 const axios = require('axios')
 const bodyParser = require('body-parser');
+
+const bookshelf = require('../database/bookshelf')
+const jsonColumns = require('bookshelf-json-columns');
+
+bookshelf.plugin(jsonColumns);
 
 app.use(bodyParser.json());
 
@@ -47,7 +51,8 @@ axios
             })
         })
     });
-//call to populate database
+
+//call to populate state in front end
 router
     .route('/')
     .get((req, res) => {
