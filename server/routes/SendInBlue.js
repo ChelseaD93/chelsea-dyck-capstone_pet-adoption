@@ -71,8 +71,8 @@ router.post('/', (req, res) => {
     };
     sendSmtpEmail.templateId = 1;
     sendSmtpEmail.params = {
-        "firstName":`${firstName}`,
-        "lastName": `${lastName}`,
+        "contact.FIRSTNAME":`${firstName}`,
+        "contact.LASTNAME": `${lastName}`,
     };
 
     apiInstance.sendTransacEmail(sendSmtpEmail).then(function(data) {

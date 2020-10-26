@@ -70,7 +70,7 @@ class AdoptableAnimals extends React.Component {
                                         <p className="animals__available-card-content-info">Size: {animal.size}</p>
                                         <p className="animals__available-card-content-info">Age: {animal.age}</p>
                                     </div>
-                                    <a href={animal.url} className="animals__available-card-link">
+                                    <a href={animal.link} className="animals__available-card-link">
                                         <button className="animals__available-card-link-button">Learn More</button>
                                     </a>
                                 </div>
