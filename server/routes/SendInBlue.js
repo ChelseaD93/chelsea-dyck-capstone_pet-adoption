@@ -62,8 +62,8 @@ router.post('/', (req, res) => {
         "name":"Chelsea Dyck",
         "email":"chelsea@mycreativeworks.ca"};
     sendSmtpEmail.to = [{
-        "email":"chelseadyck@cassconsultinc.ca",
-        "name":"Chelsea Dyck"
+        "email":`${email}`,
+        "name":`${firstName} ${lastName}`
     }];
     sendSmtpEmail.replyTo = {
         "email":"chelsea@mycreativeworks.ca",
@@ -71,8 +71,8 @@ router.post('/', (req, res) => {
     };
     sendSmtpEmail.templateId = 1;
     sendSmtpEmail.params = {
-        "firstName":"Chelsea",
-        "lastName":"Dyck",
+        "firstName":`${firstName}`,
+        "lastName": `${lastName}`,
     };
 
     apiInstance.sendTransacEmail(sendSmtpEmail).then(function(data) {
@@ -80,36 +80,6 @@ router.post('/', (req, res) => {
     }, function(error) {
     console.error(error);
     });
-    //send transactional email --- this one is for the welcome email
-    // axios
-    //     .post('https://api.sendinblue.com/v3/smtp/email',
-    //         {
-    //             headers: {Accept: 'application/json', 'Content-Type': 'application/json'}
-    //         },
-    //         {
-    //             to:[
-    //                 {
-    //                     email: email,
-    //                     name: `${firstName} ${lastName}`
-    //                 }
-    //             ],
-    //             params: {
-    //                 firstName: firstName,
-    //                 lastName: lastName,
-    //                 templateId:1
-    //             }
-    //         }
-    //     )
-    //     .then((res) => {
-    //         res.json()
-    //     })
-    //     .then(json => {
-    //         console.log(json)
-    //     })
-    //     .catch(err => {
-    //         console.error('error:' + err)
-    //     })
-
 })
 
 
