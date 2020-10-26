@@ -34,7 +34,7 @@ class Login extends React.Component {
         this.setState({
             visible : true
         });
-        this.hardReset(e)
+        
         //pull all values from form
         let newAdopter = {
             firstName: e.target.firstName.value,
@@ -50,6 +50,9 @@ class Login extends React.Component {
 
         //post new Adopter info to SendInBlue to send welcome email
         axios.post('/send-in-blue', newAdopter)
+
+        //reset the form
+        this.hardReset(e)
     }
 
 
