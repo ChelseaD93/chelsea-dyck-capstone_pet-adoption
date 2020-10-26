@@ -19,17 +19,21 @@ class AdoptableAnimals extends React.Component {
 
     //function that filters contents of page based on button clicks
     animalFilter = (animalChoice) => {
-
-        if (animalChoice === 'Cat'){
-            const filteredAnimals = this.state.animals.filter(animal => animal.type.toUpperCase() === 'Cat')
+        console.log(animalChoice)
+ 
+        if (animalChoice === 'cat'){
+            const filteredAnimals = this.state.animals.filter(animal => animal.type.toLowerCase() === 'cat')
             this.setState({selectedAnimal: filteredAnimals})
-        } else if (animalChoice === 'Dog'){
-            const filteredAnimals = this.state.animals.filter(animal => animal.type.toUpperCase() === 'Dog')
+        } else if (animalChoice === 'dog'){
+            const filteredAnimals = this.state.animals.filter(animal => animal.type.toLowerCase() ==='dog')
             this.setState({selectedAnimal: filteredAnimals})
-        } else if (animalChoice === 'Critter'){
-            const filteredAnimals = this.state.animals.filter(animal => animal.type.toUpperCase() !== 'Dog' && animal.type.toUpperCase() !=='Cat')
+        } else if (animalChoice === 'critter'){
+            const filteredAnimals = this.state.animals.filter(animal => animal.type.toLowerCase() !=='dog' && animal.type.toLowerCase() !=='cat')
             this.setState({selectedAnimal: filteredAnimals})
+        } else {
+            this.setState({selectedAnimal: '' })
         }
+        console.log(this.state.selectedAnimal)
     }
 
 
@@ -44,9 +48,10 @@ class AdoptableAnimals extends React.Component {
             </div>
             <h2 className="animals__intro">Looking for a specific animal? Choose from one of our options below:</h2>
             <div className="animals__nav">
-                    <button value='Cat' onClick={(e) => this.animalFilter(e.target.value)} className="animals__nav-link-button">Cats</button>
-                    <button value='Dog' onClick={(e) => this.animalFilter(e.target.value)} className="animals__nav-link-button">Dogs</button>
-                    <button value='Critter' onClick={(e) => this.animalFilter(e.target.value)} className="animals__nav-link-button">Critters</button>
+                <button value='all' onClick={(e) => this.animalFilter(e.target.value)} className="animals__nav-button">All</button>
+                <button value='cat' onClick={(e) => this.animalFilter(e.target.value)} className="animals__nav-button">Cats</button>
+                <button value='dog' onClick={(e) => this.animalFilter(e.target.value)} className="animals__nav-button">Dogs</button>
+                <button value='critter' onClick={(e) => this.animalFilter(e.target.value)} className="animals__nav-button">Critters</button>
             </div>
             <div className="animals__available">
                 {!this.state.animals.length ? 
