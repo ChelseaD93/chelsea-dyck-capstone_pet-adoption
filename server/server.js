@@ -6,7 +6,7 @@ require('dotenv').config();
 const port = process.env.PORT || 8080;
 const SignUpRoutes = require('./routes/SignUp');
 const PetFinderRoutes = require('./routes/PetFinder');
-// const SendInBlueRoutes = require('./routes/SendInBlue');
+const SendInBlueRoutes = require('./routes/SendInBlue');
 
 app.use(cors());
 
@@ -18,6 +18,6 @@ app.use('/sign-up', SignUpRoutes);
 
 app.use('/animals', PetFinderRoutes);
 
-// app.use('/send-in-blue', SendInBlueRoutes);
+app.use('/send-in-blue', SendInBlueRoutes);
 
 app.listen(port, () => console.log(`Running on ${port}`));
