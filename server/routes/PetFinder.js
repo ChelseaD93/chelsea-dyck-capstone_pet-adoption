@@ -4,7 +4,6 @@ const AnimalProfiles = require('../database/models/animal_profiles');
 const router = express.Router();
 const axios = require('axios')
 const bodyParser = require('body-parser');
-const images = require('../database/imageData.json');
 
 
 app.use(bodyParser.json());
