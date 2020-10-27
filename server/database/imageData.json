@@ -1,0 +1,14 @@
+[
+    {
+        "id":"1",
+        "photo":"/images/bunnies.jpg"
+    },
+    {
+        "id":"2",
+        "photo":"/images/cat.jpg"
+    },
+    {
+        "id":"3",
+        "photo":"/images/dog.jpg"
+    }
+]

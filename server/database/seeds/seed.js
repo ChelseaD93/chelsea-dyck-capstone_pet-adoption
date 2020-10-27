@@ -41,7 +41,7 @@ const animalProfilesData=[
       size: "large",
       age: "baby",
       type: "dog",
-      photo: "/images/andriyko-podilnyk-3a1NOxCBY10-unsplash.jpg",
+      photo: "/images/clover.jpg",
       link: "mylink.com"
   },
   {
@@ -49,7 +49,7 @@ const animalProfilesData=[
       size: "small",
       age: "adult",
       type: "dog",
-      photo: "/images/brianna-santellan-LGG5P7KCziU-unsplash.jpg",
+      photo: "/images/murphy.jpg",
       link: "mylink.com"
   },
   {
@@ -57,9 +57,17 @@ const animalProfilesData=[
       size: "medium",
       age: "adult",
       type: "cat",
-      photo: "/images/brianna-santellan-LGG5P7KCziU-unsplash.jpg",
+      photo: "/images/boots.jpg",
       link: "mylink.com"
   },
+  {
+    name: "Sadie",
+    size: "medium",
+    age: "adult",
+    type: "cat",
+    photo: "/images/sadie.jpeg",
+    link: "mylink.com"
+    },
 ]
 
 exports.seed = function(knex) {

@@ -13,13 +13,11 @@ class AdoptableAnimals extends React.Component {
         axios.get('/animals')
             .then((res) => {
                 this.setState({animals: res.data})
-                console.log(res.data)
             })
     }
 
     //function that filters contents of page based on button clicks
     animalFilter = (animalChoice) => {
-        console.log(animalChoice)
  
         if (animalChoice === 'cat'){
             const filteredAnimals = this.state.animals.filter(animal => animal.type.toLowerCase() === 'cat')
@@ -33,7 +31,6 @@ class AdoptableAnimals extends React.Component {
         } else {
             this.setState({selectedAnimal: '' })
         }
-        console.log(this.state.selectedAnimal)
     }
 
 

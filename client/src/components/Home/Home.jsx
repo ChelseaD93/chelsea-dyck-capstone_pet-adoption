@@ -16,7 +16,7 @@ function Home() {
                 <div className="home__main-login">
                     <p className="home__main-login-description">As you may have discovered, searching for a pet to adopt can be easy. But actually getting one can be tough! With the high number of families looking to adopt a new pet, there is a lot of competition to get  your name in first.</p>
                     <p className="home__main-login-description">We are here to help with that! By getting you to sign up for notifications, we will tell you when a new animal has been posted that fits your specifications so you can apply without constantly monitoring the sites yourself. You will get your life back and still have access the new adoptions available near you!</p>
-                    <Link to="/login" className="home__main-login-link">
+                    <Link to="/sign-up" className="home__main-login-link">
                         <button className="home__main-login-link-button">Sign Up Today</button>
                     </Link>
                 </div>
@@ -26,21 +26,21 @@ function Home() {
                         <div className="home__main-animals-card">
                             <img src={cat} alt="" className="home__main-animals-card-image"/>
                             <h3 className="home__main-animals-card-title">Adoptable Cats</h3>
-                            <Link to='/adoptable-animals/cats'className="home__main-animals-card-link">
+                            <Link to='/adoptable-animals'className="home__main-animals-card-link">
                                 <button className="home__main-animals-card-link-button">See Current Postings</button>
                             </Link>
                         </div>
                         <div className="home__main-animals-card">
                             <img src={dog} alt="" className="home__main-animals-card-image"/>
                             <h3 className="home__main-animals-card-title">Adoptable Dogs</h3>
-                            <Link to='/adoptable-animals/dogs'className="home__main-animals-card-link">
+                            <Link to='/adoptable-animals'className="home__main-animals-card-link">
                                 <button className="home__main-animals-card-link-button">See Current Postings</button>
                             </Link>
                         </div>
                         <div className="home__main-animals-card">
                             <img src={bunny} alt="" className="home__main-animals-card-image"/>
                             <h3 className="home__main-animals-card-title">Adoptable Critters</h3>
-                            <Link to='/adoptable-animals/critters'className="home__main-animals-card-link">
+                            <Link to='/adoptable-animals'className="home__main-animals-card-link">
                                 <button className="home__main-animals-card-link-button">See Current Postings</button>
                             </Link>
                         </div>

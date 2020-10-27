@@ -10,27 +10,6 @@ app.use(bodyParser.json());
 
 const API_KEY = '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';
 
-// const defaultClient = SibApiV3Sdk.ApiClient.instance;
-
-// // Configure API key authorization: api-key
-// const apiKey = defaultClient.authentications['api-key'];
-// apiKey.apiKey = API_KEY;
-// // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-// //apiKey.apiKeyPrefix['api-key'] = "Token"
-
-// // Configure API key authorization: partner-key
-// const partnerKey = defaultClient.authentications['partner-key'];
-// partnerKey.apiKey = API_KEY
-// // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-// //partnerKey.apiKeyPrefix['partner-key'] = "Token"
-
-// const api = new SibApiV3Sdk.AccountApi()
-//     api.getAccount().then(function(data) {
-//     console.log('API called successfully. Returned data: ' + data);
-//     }, function(error) {
-//     console.error(error);
-// });
-
 //route from front end to send transactional email
 router.post('/', (req, res) => {
     const firstName = req.body.firstName
@@ -45,14 +24,10 @@ router.post('/', (req, res) => {
     // Configure API key authorization: api-key
     const apiKey = defaultClient.authentications['api-key'];
     apiKey.apiKey = API_KEY;
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //apikey.apiKeyPrefix = 'Token';
 
     // Configure API key authorization: partner-key
     const partnerKey = defaultClient.authentications['partner-key'];
     partnerKey.apiKey = API_KEY;
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //partnerKey.apiKeyPrefix = 'Token';
 
     const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
 

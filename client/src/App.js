@@ -5,7 +5,6 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import AdoptableAnimals from './components/AdoptableAnimals/AdoptableAnimals';
 import Login from './components/Login/Login';
-import Profile from './components/Profile/Profile';
 import NotFound from './components/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
 import './App.scss';
@@ -19,9 +18,8 @@ function App() {
           <Route path='/' exact render={(routeProps) => <Home {...routeProps} />} />
           <Route path='/about' exact render={(routeProps) => <About {...routeProps} />} />
           <Route path='/adoptable-animals' exact render={(routeProps) => <AdoptableAnimals {...routeProps} />} />
-          <Route path='/login' exact render={(routeProps) => <Login {...routeProps} />} />
-          <Route path='/profile' exact render={(routeProps) => <Profile {...routeProps} />} />
-          <Route path='/not-found' exact render={(routeProps) => <NotFound {...routeProps} />} />
+          <Route path='/sign-up' exact render={(routeProps) => <Login {...routeProps} />} />
+          <Route component={NotFound}/>
         </Switch>
         <Footer />
       </BrowserRouter>

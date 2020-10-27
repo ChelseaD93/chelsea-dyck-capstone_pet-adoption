@@ -1,0 +1,104 @@
+@import '../../styles/global.scss';
+
+.notFound {
+    height: 86vh;
+    width: 75vw;
+    padding: 0 12vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    &__title {
+        margin-top: 0;
+
+    }
+
+    &__blurb {
+        margin: 0;
+    }
+
+    &__options {
+        margin-top: 3vh;
+        display: flex;
+        justify-content: space-evenly;
+
+        @include tablet {
+            width: 50vw;
+            padding: 0 13vw;
+        }
+
+        @include desktop {
+            width: 40vw;
+            padding: 0 18vw;
+        }
+
+        &-link {
+
+            &-button {
+                @include CTA-button;
+            }
+        }
+
+        &-button {
+            @include cancel-button;
+        }
+    }
+
+    &__popup {
+        
+        &-message {
+            padding: 3vh 6vw;
+            background-color: $background-colour-one;
+            position: absolute;
+            top: -35vh;
+            left: -41vw;
+            width: 70vw;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include tablet {
+                width: 50vw;
+                left: -31vw;
+                top: -40vh;
+            }
+
+            @include desktop {
+                width: 30vw;
+                left: -21vw;
+                top: -42vh;
+            }
+
+            &-title {
+                margin-top: 0;
+                font-size: 1.5rem;
+
+            }
+
+            &-photo {
+                width: 70vw;
+
+                @include tablet {
+                    width: 50vw;
+                }
+
+                @include desktop {
+                    width: 35vw;
+                }
+    
+            }
+
+            &-close {
+                margin-top: 3vh;
+
+                &-button{
+                    @include CTA-button;
+
+                }
+                
+            }
+        }
+    }
+}
