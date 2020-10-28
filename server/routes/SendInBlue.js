@@ -3,7 +3,6 @@ const app = express();
 const SibApiV3Sdk = require('sib-api-v3-sdk');
 //const AnimalProfiles = require('../database/models/animal_profiles');
 const router = express.Router();
-const axios = require('axios')
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
