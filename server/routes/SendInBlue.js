@@ -15,9 +15,6 @@ router.post('/', (req, res) => {
     const firstName = req.body.firstName
     const lastName = req.body.lastName
     const email = req.body.email
-    console.log(firstName)
-    console.log(lastName)
-    console.log(email)
 
     const defaultClient = SibApiV3Sdk.ApiClient.instance;
 

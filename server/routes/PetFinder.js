@@ -57,8 +57,6 @@ router
                             } else {
                                 animalPhoto = photos[0].image
                             }
-                            console.log(animal.species)
-                            console.log(animalPhoto)
                             new AnimalProfiles(
                                 {
                                     name: animal.name,
