@@ -4,10 +4,11 @@ const SibApiV3Sdk = require('sib-api-v3-sdk');
 //const AnimalProfiles = require('../database/models/animal_profiles');
 const router = express.Router();
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 app.use(bodyParser.json());
 
-const API_KEY = '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';
+const API_KEY = process.env.SIB;
 
 //route from front end to send transactional email
 router.post('/', (req, res) => {

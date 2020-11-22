@@ -4,13 +4,14 @@ const AnimalProfiles = require('../database/models/animal_profiles');
 const router = express.Router();
 const axios = require('axios')
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 
 app.use(bodyParser.json());
 
 //information for API access through PetFinder.com
-const API_KEY = 'Ab8xQ5x4ko6Ue4EfS12b2T4jmijVdGltbWXPJ8zLreFMbC9Lo1';
-const SECRET_KEY = 'vswXi2YoIUPufT0BrJCtRXoXKkJI8gEn16QehuXn';
+const API_KEY = process.env.PFA;
+const SECRET_KEY = process.env.PFS;
 
 //filler photos for temp database from API
 const photos = [
@@ -42,7 +43,7 @@ router
             )
             .then((res) => {
                 axios
-                    .get('https://api.petfinder.com/v2/animals?limit=75', { 
+                    .get('https://api.petfinder.com/v2/animals?limit=25', { 
                         headers: {
                             Authorization: `Bearer ${res.data.access_token}`
                         }
